@@ -1,0 +1,19 @@
+[project]
+name = "hackathon"
+version = "0.1.0"
+description = "Computer Vision Project for AI Inpainted Image Segmentation"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "albumentations>=2.0.5",
+    "ipykernel>=6.29.5",
+    "kaggle>=1.7.4.2",
+    "matplotlib>=3.10.1",
+    "opencv-python>=4.11.0.86",
+    "pandas>=2.2.3",
+    "scikit-learn>=1.6.1",
+    "segmentation-models-pytorch>=0.4.0",
+    "torchvision>=0.21.0",
+    "tqdm>=4.67.1",
+    "transformers>=4.50.0",
+]

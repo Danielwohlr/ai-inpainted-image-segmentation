@@ -1,0 +1,14 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+aaltoes*
+dist/
+trained_models/unet*
+trained_models/segfort_basic_model.pth
+dataset/
+wheels/
+*.egg-info
+submissions/
+# Virtual environments
+.venv
