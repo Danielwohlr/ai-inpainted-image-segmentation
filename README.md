@@ -4,9 +4,9 @@
   <br/> 
 </p>
 
-Goal of an hackathon I attended in March 2025 (shoutout to Aaltoes), was to accurately detect inpainted (manipulated) regions in images. This binary segmentation task has important applications in digital forensics, media authentication, and combating misinformation.
+Goal of an hackathon I attended in March 2025 (shoutout to Aaltoes), was to accurately detect AI inpainted (manipulated) regions in images. This binary segmentation task has important applications in digital forensics, media authentication, and combating misinformation.
 
-Achieved validation DICE score was around 0.85.
+Achieved test DICE score was around 0.85.
 
 
 </p>
@@ -16,9 +16,9 @@ Achieved validation DICE score was around 0.85.
 
 ## Dataset
 
-- Training set: 28101 image pairs (original + manipulated) with ground-truth masks
-- Test set: 18735 manipulated images (without masks)
-- Image resolution: 256×256 pixels
+- Training set: 28101 images  (original + manipulated + ground-truth mask) 
+- Test set: 18735 manipulated images (without originals)
+- Image resolution: 256×256 pixels, 3 channels of RGB values
 
 Original dataset and pre-processed images are too large to store here.
 
@@ -30,7 +30,7 @@ Original dataset and pre-processed images are too large to store here.
 
 ## Architecture and approach
 
-The solution is based on a transformer model (SegFormer) trained to detect manipulated regions in inpainted images. Each image is preprocessed into 7-channel tensors consisting of:
+The solution is based on a `transformer model (SegFormer)` trained to detect manipulated regions in inpainted images. Each image is preprocessed into 7-channel tensors consisting of:
 
 - 3 normalized RGB channels (ImageNet stats)
 
